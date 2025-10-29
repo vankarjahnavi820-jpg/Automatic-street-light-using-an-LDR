@@ -1,0 +1,16 @@
+# Automatic Street Light using LDR
+
+This project automatically turns ON the LED when it gets dark and turns it OFF during daylight using an LDR sensor. 
+It helps in saving electricity by controlling the light based on ambient light intensity.
+
+## Components Used
+- Arduino UNO
+- LDR Sensor
+- IR Sensor (optional)
+- LED or bulb
+- Resistors and wires
+
+## Working
+- The LDR detects the amount of light.
+- When the light level falls below a threshold (nighttime), the Arduino turns ON the LED.
+- When light increases (daytime), the LED turns OFF automatically.
