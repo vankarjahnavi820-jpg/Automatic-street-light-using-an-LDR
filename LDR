@@ -1,0 +1,26 @@
+int ledPin = 2; // LED connected to digital pin 2
+int ldrpin = A5; // LDR sensor coneected to analog pin A5
+int irPin = A0; // IR sensor connected to analog pin A0
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(ledPin, OUTPUT);
+  pinMode(ldrPin, INPUT);
+  pinmode(lrPin, INPUT);
+}
+void loop() {
+  int ldrValue = analogRead(ldrPin);
+  int irValue = analogRead(irPin);
+
+  Serial.print("LDR Value; ");
+  Serial.print(ldrValue);
+  Serial.print(" - IR Value; ");
+  Serial.print(irValue);
+
+  if (ldrValue < 500) { // Adjust the threshold value based on your LDR reading
+    digitalWrite(ledPin, HIGH); // Turn on the LED
+  } else {
+    digitalWrite(ledPin, LOW); // Turn off the LED
+  }
+   delay(500); // Add a small delay to prevent rapid toggling due to sensor noise
+}
